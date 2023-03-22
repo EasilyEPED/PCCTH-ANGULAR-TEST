@@ -1,0 +1,13 @@
+<div class="form-group">
+  <input
+    [ngClass]="{ error: !model.saleAmount && summit }"
+    TwoDigitDecimaNumberDirective
+    CurrencyFormat
+    [(ngModel)]="model.saleAmount"
+    class="form-control"
+    type="text"
+    autofocus
+    placeholder="THB"
+    (blur)="valueChangebyHover()"
+  />
+</div>

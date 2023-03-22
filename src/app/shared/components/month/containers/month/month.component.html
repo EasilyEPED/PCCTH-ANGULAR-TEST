@@ -1,0 +1,13 @@
+<label for="month" class="form-label">
+  Vat Month <span class="validate-error">*</span>
+</label>
+<select
+  [ngClass]="{ error: !model.month && summit }"
+  [(ngModel)]="model.month"
+  class="form-select"
+  id="month"
+>
+  <option *ngFor="let data of months" [value]="data.value">
+    {{ data.text }}
+  </option>
+</select>

@@ -1,0 +1,13 @@
+<div class="form-group">
+  <input
+    [ngClass]="{ error: !model.taxAmount && summit }"
+    TwoDigitDecimaNumberDirective
+    CurrencyFormat
+    [(ngModel)]="model.taxAmount"
+    class="form-control"
+    type="text"
+    autofocus
+    placeholder="THB"
+    (blur)="changeVal()"
+  />
+</div>

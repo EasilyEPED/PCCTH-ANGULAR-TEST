@@ -1,0 +1,103 @@
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.step {
+  display: flex;
+  justify-content: space-around;
+}
+
+.step .step-active .card-logo {
+  filter: unset !important;
+  opacity: unset !important;
+}
+
+.step .card-logo-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.step .card-logo-block .card-logo {
+  margin: 0 auto 10px auto;
+  display: block;
+  filter: grayscale(100%);
+  opacity: 0.3;
+}
+
+.step .card-logo-block .card-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.btn {
+  width: 250px;
+}
+
+.btn-mr5 {
+  margin-right: 5rem;
+}
+
+.mb0 {
+  margin-bottom: 0rem !important;
+}
+
+.display {
+  text-align: right;
+}
+
+.modal.modal-vcenter {
+  padding: 15px !important;
+}
+.modal.modal-vcenter .modal-dialog {
+  /* overwrites bootstrap4 properties */
+  position: relative;
+  margin: auto;
+  max-width: 100%;
+
+  /* added properties */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 576px) {
+  .modal.modal-vcenter .modal-dialog {
+    min-width: 546px; /* or whatever min-width you want */
+    max-width: 50%; /* width for most tablets and desktops */
+  }
+}
+
+.modal .modal-body {
+  max-height: 40vh;
+  overflow-y: auto;
+}
+@media screen and (min-height: 460px) {
+  .modal .modal-body {
+    max-height: 65vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .step .card-logo-block .card-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-mr5 {
+    margin-right: 0rem;
+  }
+
+  .display {
+    text-align: left;
+  }
+}

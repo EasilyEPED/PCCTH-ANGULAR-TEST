@@ -1,0 +1,27 @@
+<div class="app-brand demo">
+  <a class="app-brand-link" [routerLink]="['/showroom']">
+    <img
+      src="./assets/img/logos/angular-logo.png"
+      alt="main_logo"
+      class="navbar-brand-img h-100"
+    />
+    <span class="demo menu-text fw-bolder ms-2"> PCCTH TEST ANGULAR! </span>
+  </a>
+  <a
+    id="layout-menu-toggle"
+    class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none"
+  >
+    <i class="bx bx-chevron-left bx-sm align-middle"></i>
+  </a>
+</div>
+
+<div class="menu-inner-shadow"></div>
+
+<ul class="menu-inner py-1">
+  <li class="menu-item" routerLinkActive="active">
+    <a class="menu-link" [routerLink]="['/inputDetail']">
+      <i class="menu-icon tf-icons bx bx-home-circle"></i>
+      <div data-i18n="Analytics">PCCTH</div>
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,114 @@
+<h4 class="fw-bold py-3 mb-4 flex">Simmit Tax Filling</h4>
+<div class="flex"></div>
+
+<div class="row mb-5">
+  <div class="col step">
+    <div
+      class="card-logo-block"
+      [ngClass]="{ 'step-active': iscurrentstep == 1 }"
+    >
+      <img class="card-logo" src="../../../assets/picture/step1.png" alt="" />
+      <span class="step-desc">Input Detail</span>
+    </div>
+    <div
+      class="card-logo-block"
+      [ngClass]="{ 'step-active': iscurrentstep == 2 }"
+    >
+      <img class="card-logo" src="../../../assets/picture/step2.png" alt="" />
+      <span class="step-desc">Review & Comfirm</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <p class="mb0">Tax Filling Detail</p>
+
+        <hr />
+
+        <div class="row mb-3">
+          <label class="form-label col-md-2">Vat Month</label>
+          <label class="form-label col-md-2">{{ taxData.filingType }}</label>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label col-md-2">Type of Filling</label>
+          <label class="form-label col-md-2"
+            >{{ taxData.month }} {{ taxData.year }}</label
+          >
+        </div>
+
+        <p class="mb0">Tax Computation</p>
+
+        <hr />
+
+        <div class="row mb-3">
+          <label class="form-label col-md-6"
+            >Total value of taxable electronic service exclusive of Vat</label
+          >
+          <label class="form-label col-md-6 display">{{
+            taxData.saleAmount | number : "1.2-2"
+          }}</label>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label col-md-6"
+            >Total Vat to be remitted (7 % of Total value of taxable electronic
+            service exclusive of Vat)</label
+          >
+          <label class="form-label col-md-6 display">{{
+            taxData.taxAmount | number : "1.2-2"
+          }}</label>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label col-md-6">Total Amount Payable</label>
+          <label class="form-label col-md-6 display">{{
+            taxData.taxAmount | number : "1.2-2"
+          }}</label>
+        </div>
+
+        <p class="mb0">Declaration</p>
+        <hr />
+        <label class="mb0"
+          >I hereby certify that information given above are true and correct
+          and agree to be bound by such Information</label
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center">
+  <button
+    type="button"
+    class="btn btn-dark btn-lg border border-dark"
+    data-bs-toggle="modal"
+    data-bs-target="#fullscreenModal"
+  >
+    Confirm and Summit
+  </button>
+</div>
+
+<div
+  class="modal modal-vcenter fade"
+  id="fullscreenModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="fullscreenModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fullscreenModal">RESULT JSON</h5>
+      </div>
+      <div class="modal-body text-center">
+        <label>{{ taxData | json }}</label>
+      </div>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>

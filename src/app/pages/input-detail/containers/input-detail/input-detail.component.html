@@ -1,0 +1,133 @@
+<h4 class="fw-bold py-3 mb-4 flex">Simmit Tax Filling</h4>
+<div class="flex"></div>
+
+<div class="row mb-5">
+  <div class="col step">
+    <div
+      class="card-logo-block"
+      [ngClass]="{ 'step-active': iscurrentstep == 1 }"
+    >
+      <img class="card-logo" src="../../../assets/picture/step1.png" alt="" />
+      <span class="step-desc">Input Detail</span>
+    </div>
+    <div
+      class="card-logo-block"
+      [ngClass]="{ 'step-active': iscurrentstep == 2 }"
+    >
+      <img class="card-logo" src="../../../assets/picture/step2.png" alt="" />
+      <span class="step-desc">Review & Comfirm</span>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="mb0">1. Tax Filling Detail</div>
+
+        <hr />
+
+        <div class="mt-5 mb-2">
+          Type of Filling <span class="validate-error">*</span>
+        </div>
+
+        <app-filingType
+          [model]="Data"
+          (modelChange)="calAdditionalRate()"
+        ></app-filingType>
+
+        <div class="row mt-3 mb-3">
+          <app-month
+            [model]="Data"
+            [summit]="summit"
+            class="mb-3 col-md-2"
+          ></app-month>
+          <app-year
+            [model]="Data"
+            [summit]="summit"
+            class="mb-3 col-md-2"
+          ></app-year>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <p class="mb0">2. Tax Computation</p>
+          <p class="mb0 text-decoration-underline">View Exchange Rate</p>
+        </div>
+        <hr />
+
+        <div class="mt-5">
+          Provide total value taxable electronic service
+          <span class="validate-error">*</span>
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-8">
+            <label>
+              1. Total value of taxable electronic service exclusive of
+              Vat</label
+            >
+          </div>
+          <app-saleAmount
+            class="mb-3 col-md-4"
+            [model]="Data"
+            [summit]="summit"
+            (modelChange)="caltaxAmount()"
+          ></app-saleAmount>
+          <div class="mb-3 col-md-8">
+            <label> 2. Total Vat to be remitted (7 % of 1.)</label>
+          </div>
+          <app-taxAmount
+            #taxAmount
+            class="mb-3 col-md-4"
+            [model]="Data"
+            [summit]="summit"
+            (modelChange)="calAdditionalRate()"
+          ></app-taxAmount>
+        </div>
+
+        <div *ngIf="Data.filingType === '1'">
+          <p>In case of late filling and payment, or additional filling</p>
+          <div class="row">
+            <div class="mb-3 col-md-8">
+              <label>3. Surcharge</label>
+            </div>
+            <app-surcharge
+              #surcharge
+              class="mb-3 col-md-4"
+              [model]="Data"
+            ></app-surcharge>
+            <div class="mb-3 col-md-8">
+              <label>4. Penalty</label>
+            </div>
+            <app-penalty class="mb-3 col-md-4" [model]="Data"></app-penalty>
+            <div class="mb-3 col-md-8">
+              <label
+                >5. Total amount of VAT, surcharge, and penalty to be remitted
+                (2.+3.+4.)</label
+              >
+            </div>
+            <app-totalAmount
+              #totalAmount
+              class="col-md-4"
+              [model]="Data"
+            ></app-totalAmount>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-grid gap-2 d-md-block">
+  <button type="button" class="btn btn-light btn-lg border border-dark btn-mr5">
+    Back
+  </button>
+  <button
+    type="button"
+    class="btn btn-dark btn-lg border border-dark"
+    (click)="next()"
+  >
+    Next
+  </button>
+</div>

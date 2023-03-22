@@ -1,0 +1,139 @@
+/* You can add global styles to this file, and also import other style files */
+img, svg {
+    vertical-align: middle;
+}
+.navbar-brand-img {
+    max-width: 100%;
+    max-height: 2rem;
+}
+.h-100 {
+    height: 100%!important;
+}
+.authentication-wrapper{
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.authentication-wrapper {
+    display: flex;
+    flex-basis: 100%;
+    min-height: 100vh;
+    width: 100%;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid #d9dee3;
+    border-radius: 0.5rem;
+}
+.app-brand {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    line-height: 1;
+    min-height: 1px;
+    align-items: center;
+}
+
+::ng-deep .p-datatable .p-datatable-tbody > tr {
+    background: #ffffff;
+    color: rgb(122 137 154);
+    transition: none;
+}
+
+::ng-deep .p-datatable-thead > tr > th {
+    text-transform: uppercase !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.7px !important;
+    color: #566a7f !important;
+}
+
+::ng-deep .p-paginator {
+    background: #ffffff !important;
+    color: #0b5cac !important;
+    border: solid #dee2e6 !important;
+    border-width: 0 !important;
+    padding: 0.75rem !important;
+    border-radius: 4px !important;
+}
+
+::ng-deep .p-paginator .p-paginator-current {
+    background-color: #ffffff !important;
+    border: 1px solid #dee2e6 !important;
+    color: #0b5cac !important;
+    min-width: 2.357rem !important;
+    height: 2.357rem !important;
+    margin: 0 0 0 -1px !important;
+    padding: 0 0.5rem !important;
+}
+
+::ng-deep .p-paginator .p-paginator-pages .p-paginator-page {
+    background-color: #ffffff !important;
+    border: 1px solid #dee2e6 !important;
+    color: #0b5cac !important;
+    min-width: 2.357rem !important;
+    height: 2.357rem !important;
+    margin: 0 0 0 -1px !important;
+    transition: box-shadow 0.15s !important;
+    border-radius: 0 !important;
+}
+
+::ng-deep .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: #0b5cac !important;
+    border-color: #0b5cac !important;
+    color: #ffffff !important;
+}
+
+.swal2-title {
+    font-size: 1.200em !important;
+}
+
+.swal2-styled.swal2-confirm {
+
+    background-color: #0b5cac !important;
+
+}
+
+:host ::ng-deep .custom-spinner .p-progress-spinner-circle {
+    animation: custom-progress-spinner-dash 1.5s ease-in-out infinite, custom-progress-spinner-color 6s ease-in-out infinite;
+}
+
+@keyframes custom-progress-spinner-color {
+    100%,
+    0% {
+        stroke: #16697A !important;
+    }
+    40% {
+        stroke: #489FB5 !important;
+    }
+    66% {
+        stroke: #82C0CC !important;
+    }
+    80%,
+    90% {
+        stroke: #f3f1ef !important;
+    }
+}
+
+@keyframes custom-progress-spinner-dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+    }
+}
+
+body {background-color: rgb(255, 255, 255);}

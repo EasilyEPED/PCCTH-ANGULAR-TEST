@@ -1,0 +1,11 @@
+input {
+  text-align: right !important;
+}
+
+input[type="text"]::placeholder {
+  text-align: right !important;
+}
+
+.error {
+  border-color: #f27474;
+}

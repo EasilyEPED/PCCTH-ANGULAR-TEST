@@ -1,0 +1,61 @@
+<!-- Content -->
+<div class="container-xxl">
+  <div class="authentication-wrapper authentication-basic container-p-y">
+    <div class="authentication-inner">
+      <!-- Register -->
+      <div class="card">
+        <div class="card-body">
+          <!-- Logo -->
+          <div class="app-brand justify-content-center mb-5">
+            <a href="#" class="app-brand-link gap-2">
+              <span class="app-brand-logo demo">
+                <img
+                  src="./assets/img/logos/angular-logo.png"
+                  alt="main_logo"
+                  class="navbar-brand-img h-100"
+                />
+              </span>
+              <span class="demo text-body fw-bolder">
+                PCCTH TEST ANGULAR!
+              </span>
+            </a>
+          </div>
+          <!-- /Logo -->
+          <h4 class="mb-2">Welcome to PCCTH TEST ANGULAR!</h4>
+          <p class="mb-4">Please Fill Your Username</p>
+
+          <div id="formAuthentication" class="mb-3" action="#" method="POST">
+            <div class="mb-3">
+              <label for="Username" class="form-label">Username</label>
+              <input
+                [(ngModel)]="model.username"
+                type="text"
+                class="form-control"
+                id="Username"
+                name="Username"
+                placeholder="Username"
+                autofocus
+              />
+              <div [ngClass]="{ 'validate-error': isUser }" *ngIf="isUser">
+                Please provide a valid username
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <button
+                class="btn btn-primary d-grid w-100"
+                type="submit"
+                (click)="login()"
+              >
+                Sign in
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Register -->
+    </div>
+  </div>
+</div>
+
+<!-- / Content -->

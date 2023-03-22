@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "dealer_code": "70011",
+      "dealer_name": "บจก.เกียรติยานยนต์",
+      "show_room_code": "7001501",
+      "show_room_name": "สนง.ท่าข้าม ฉะเชิงเทรา",
+      "status": "A"
+    },
+    {
+      "dealer_code": "70012",
+      "dealer_name": "บจก.เกียรติยานยนต์",
+      "show_room_code": "7001502",
+      "show_room_name": "พนมสารคาม ฉะเชิงเทรา",
+      "status": "I"
+    },
+    {
+      "dealer_code": "70013",
+      "dealer_name": "บจก.น่าเจริญ ลิสชิ่ง",
+      "show_room_code": "7001503",
+      "show_room_name": "สนง.ประชาสงเคราะห์",
+      "status": "A"
+    },
+    {
+      "dealer_code": "70014",
+      "dealer_name": "บจก.เจ.ซีจักรชัย",
+      "show_room_code": "7001504",
+      "show_room_name": "สนง.พัฒนาการ",
+      "status": "I"
+    },
+    {
+      "dealer_code": "70015",
+      "dealer_name": "บจก.เฮงเจริญ ลิสซิ่ง",
+      "show_room_code": "7001505",
+      "show_room_name": "สนง.วัดไผ่เขียว",
+      "status": "A"
+    }
+  ]
+}

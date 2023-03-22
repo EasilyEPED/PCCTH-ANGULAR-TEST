@@ -1,0 +1,37 @@
+
+<ul class="navbar-nav me-auto nav-custom1">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Profile
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li>
+          <a class="dropdown-item" href="#">
+            <div class="d-flex">
+              <div class="flex-shrink-0 me-3">
+                <div class="avatar avatar-online">
+                  <img
+                    src="./assets/img/avatars/9.png"
+                    alt
+                    class="w-px-40 h-auto rounded-circle"
+                  />
+                </div>
+              </div>
+              <div class="flex-grow-1">
+                <span class="fw-semibold d-block">{{user}}</span>
+                <small class="text-muted">Admin</small>
+              </div>
+            </div>
+          </a>
+      </li>
+      <li><hr class="dropdown-divider"></li>
+      <li>
+        <a class="dropdown-item">
+          <i class="bx bx-power-off me-2"></i>
+          <span class="align-middle" (click)="logout()" >Log Out</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+

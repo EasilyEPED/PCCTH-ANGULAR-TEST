@@ -1,0 +1,11 @@
+<label for="year" class="form-label">&nbsp;</label>
+<select
+  [ngClass]="{ error: !model.year && summit }"
+  [(ngModel)]="model.year"
+  class="form-select"
+  id="year"
+>
+  <option *ngFor="let data of years" [value]="data.value">
+    {{ data.text }}
+  </option>
+</select>
