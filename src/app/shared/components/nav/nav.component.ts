@@ -19,10 +19,6 @@ export class NavComponent implements OnInit {
       .getLogin()
       .pipe(takeUntil(this.destroyed$))
       .subscribe(() => {
-        console.log(
-          '00000000000',
-          JSON.parse(localStorage.getItem('PCCTH_LOGIN'))?.['username']
-        );
         this.user = JSON.parse(localStorage.getItem('PCCTH_LOGIN'))?.[
           'username'
         ];

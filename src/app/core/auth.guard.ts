@@ -29,7 +29,7 @@ export class AuthGuard implements CanActivate {
 
   async checkComplete(state: any) {
     let loginuser: any = localStorage.getItem('PCCTH_LOGIN');
-    if (!loginuser?.username && state.url === '/404') {
+    if (!loginuser && state.url === '/404') {
       return false;
     }
 
