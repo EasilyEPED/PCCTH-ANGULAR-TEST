@@ -22,12 +22,6 @@ const routes: Routes = [
     component: PagesComponent,
     canActivate: [AuthGuard],
     children: [
-      // {
-      //   path: 'home',
-      //   loadChildren: () =>
-      //     import('./home/home.module').then((module) => module.HomeModule),
-      //   //canActivate: [AuthGuard],
-      // },
       {
         path: 'inputDetail',
         loadChildren: () =>

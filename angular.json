@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ODC_Web": {
+    "ANGULARTEMP": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,10 +23,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
               "./node_modules/font-awesome/css/font-awesome.css",
@@ -96,10 +93,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ODC_Web:build:production"
+              "browserTarget": "ANGULARTEMP:build:production"
             },
             "development": {
-              "browserTarget": "ODC_Web:build:development"
+              "browserTarget": "ANGULARTEMP:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -107,7 +104,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ODC_Web:build"
+            "browserTarget": "ANGULARTEMP:build"
           }
         },
         "test": {
@@ -118,13 +115,8 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
