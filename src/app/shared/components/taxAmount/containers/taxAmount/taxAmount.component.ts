@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-taxAmount',
@@ -6,6 +14,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./taxAmount.component.css'],
 })
 export class TaxAmountComponent implements OnInit {
+  @ViewChild('Input', { static: false }) taxAmount: ElementRef;
   @Input() model: any;
   @Input() summit: boolean;
   @Output() modelChange = new EventEmitter<any>();
@@ -18,6 +27,10 @@ export class TaxAmountComponent implements OnInit {
     const result = parseInt(this.model?.saleAmount) * 0.07;
     this.originResult = isNaN(result) ? '' : result.toFixed(2).toString();
     this.model.taxAmount = isNaN(result) ? '' : result.toFixed(2).toString();
+    this.taxAmount.nativeElement['focus']();
+    setTimeout(() => {
+      this.taxAmount.nativeElement['blur']();
+    }, 1);
   }
 
   changeVal() {

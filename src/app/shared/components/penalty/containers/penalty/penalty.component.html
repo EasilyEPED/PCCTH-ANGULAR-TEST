@@ -1,3 +1,11 @@
 <div class="form-group">
-  <input [(ngModel)]="model.penalty" class="form-control" type="text" [readonly]="true" placeholder="0.00 THB"/>
+  <input
+    TwoDigitDecimaNumberDirective
+    CurrencyFormat
+    [(ngModel)]="model.penalty"
+    class="form-control"
+    type="text"
+    [readonly]="true"
+    placeholder="0.00 THB"
+  />
 </div>
