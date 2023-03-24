@@ -27,10 +27,7 @@ export class TaxAmountComponent implements OnInit {
     const result = parseInt(this.model?.saleAmount) * 0.07;
     this.originResult = isNaN(result) ? '' : result.toFixed(2).toString();
     this.model.taxAmount = isNaN(result) ? '' : result.toFixed(2).toString();
-    this.taxAmount.nativeElement['focus']();
-    setTimeout(() => {
-      this.taxAmount.nativeElement['blur']();
-    }, 1);
+    this.detectOnblur();
   }
 
   changeVal() {
@@ -38,7 +35,16 @@ export class TaxAmountComponent implements OnInit {
     if (Math.abs(result) > 20) {
       this.model.taxAmount = this.originResult;
       alert('Invalid Tax');
+      this.detectOnblur();
+      return;
     }
     this.modelChange.emit();
+  }
+
+  detectOnblur() {
+    this.taxAmount.nativeElement['focus']();
+    setTimeout(() => {
+      this.taxAmount.nativeElement['blur']();
+    }, 1);
   }
 }
